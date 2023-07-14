@@ -1,5 +1,5 @@
-FROM nvidia/cuda:10.0-cudnn7-runtime-ubuntu18.04
-env DEBIAN_FRONTEND=noninteractive
+FROM nvidia/cuda:11.5.2-cudnn8-runtime-ubuntu18.04
+ENV DEBIAN_FRONTEND=noninteractive
 SHELL ["/bin/bash", "-c"]
 ENV TZ=America/Denver
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
